@@ -1,0 +1,23 @@
+<h1>Listing previews</h1>
+
+<table>
+  <tr>
+    <th>Screenshot</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @previews.each do |preview| %>
+  <tr>
+    <td><%= preview.screenshot %></td>
+    <td><%= link_to 'Show', preview %></td>
+    <td><%= link_to 'Edit', edit_preview_path(preview) %></td>
+    <td><%= link_to 'Destroy', preview, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Preview', new_preview_path %>

@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Screenshot:</b>
+  <%= image_tag @preview.screenshot.url%>
+</p>
+
+
+<%= link_to 'Edit', edit_preview_path(@preview) %> |
+<%= link_to 'Back', previews_path %>
