@@ -4,9 +4,9 @@ describe PreviewsController do
   describe 'create' do
 
     it 'works' do
-      post :create, :preview => {:url => 'http://google.com'}
+      post :create, "preview"=> {"url"=>"http://google.com"}
 
-      response.should be_success
+      response.should be_redirect
     end
   end
 end

@@ -2,7 +2,7 @@
 
 <p>
   <b>Screenshot:</b>
-  <%= image_tag @preview.screenshot.url%>
+  <%= link_to image_tag(@preview.screenshot.url), @preview.url %>
 </p>
 
 

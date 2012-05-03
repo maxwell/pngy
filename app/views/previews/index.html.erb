@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Screenshot</th>
+    <th>site</th>
     <th></th>
     <th></th>
     <th></th>
@@ -10,7 +10,7 @@
 
 <% @previews.each do |preview| %>
   <tr>
-    <td><%= preview.screenshot %></td>
+    <td><%= preview.url %></td>
     <td><%= link_to 'Show', preview %></td>
     <td><%= link_to 'Edit', edit_preview_path(preview) %></td>
     <td><%= link_to 'Destroy', preview, confirm: 'Are you sure?', method: :delete %></td>
