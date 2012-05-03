@@ -33,6 +33,13 @@ GEM
     carrierwave (0.6.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.3.1)
     diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.3.1)
@@ -117,6 +124,7 @@ PLATFORMS
 
 DEPENDENCIES
   carrierwave
+  coffee-rails
   figaro
   jquery-rails
   pg
