@@ -1,6 +1,5 @@
 class Phantom
-  PLATFORM = RUBY_PLATFORM =~ /linux/ ? 'linux' : 'mac' 
-  BINARY = Rails.root.join('lib', 'phantomjs', PLATFORM, 'bin', 'phantomjs')
+  BINARY = Rails.root.join('lib', 'phantomjs', 'linux', 'bin', 'phantomjs')
   RASTERIZE = Rails.root.join('lib', 'rasterize.js')
   TMP_DIRECTORY = Rails.root.join('tmp', 'screenshots')
 

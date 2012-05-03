@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20120503053015) do
 
   create_table "previews", :force => true do |t|
     t.string   "screenshot"
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
