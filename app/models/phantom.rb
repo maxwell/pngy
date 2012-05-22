@@ -1,5 +1,4 @@
 class Phantom
-  BINARY = Rails.root.join('lib', 'phantomjs', 'linux', 'bin', 'phantomjs')
   RASTERIZE = Rails.root.join('lib', 'rasterize.js')
   TMP_DIRECTORY = Rails.root.join('tmp', 'screenshots')
 
@@ -8,15 +7,13 @@ class Phantom
   end
 
   def grab_screenshot
-    Phantom.command("#{RASTERIZE.to_s} #{@url} #{clean_filename}.png")
+   filename = clean_filename
+   Phantomjs.run(RASTERIZE.to_s, @url, filename) 
+   filename
   end
 
   def clean_filename
-    TMP_DIRECTORY + @url.delete('/.:?!')
-  end
-
-  def self.command(exec)
-    command = RUBY_PLATFORM =~ /linux/ ? BINARY : 'phantomjs'
-    `#{command} #{exec}`.chomp
+    Rails.logger.info(TMP_DIRECTORY)
+    "#{TMP_DIRECTORY}/#{@url.delete('/.:?!')}.png"
   end
 end

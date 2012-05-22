@@ -7,6 +7,8 @@ class Preview < ActiveRecord::Base
   def url=(site)
     self[:url] = site
     filename = Phantom.new(site).grab_screenshot
+
+    Rails.logger.info filename + ' is the cool thing'
     self.screenshot.store!(File.open(filename))
   end
 end

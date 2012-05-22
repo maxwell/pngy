@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/maxwell/phantomjs.rb.git
+  revision: 99313fad1efd733432939d000f4ee02dd6c6aa5b
+  specs:
+    phantomjs.rb (0.0.1)
+      phantomjs-mac
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -60,6 +67,7 @@ GEM
     mime-types (1.18)
     multi_json (1.3.4)
     pg (0.13.2)
+    phantomjs-mac (0.0.3)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -128,6 +136,7 @@ DEPENDENCIES
   figaro
   jquery-rails
   pg
+  phantomjs.rb!
   rails (= 3.2.3)
   rspec-rails
   sass-rails (~> 3.2.5)
