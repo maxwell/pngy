@@ -1,0 +1,6 @@
+# Add application configuration variables here, as shown below.
+#
+  AWS_ACCESS_KEY_ID:        # required
+  AWS_SECRET_ACCESS_KEY:    # required
+  AWS_BUCKET_NAME:          #required
+  AWS_REGION:               #required
